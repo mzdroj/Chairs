@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAdUAeAOrGZwDrxmcAbz8ZAOrFagDIoVUA6cRlAINrUwDqx2UAbUAXAOjGaABvPBoA6sZoAG4/GgDqxWsAcD8aAHE/GgByPxoAcT4dANm0YgB2RSIAbT0YAPz+/QDqx2YA68dmAOnGaQBhQykA6sZpAOvGaQBxQBgA/Pr4AM2jWQBwPxsAlmotAHE/GwDZtWAA2rVgANu1YADqxWQAv6ycAGs9GQD///sA+/7+AL+VUADqx2cAfU0dAP7+/gByQRYA68ZqAIVYHwBxQBkAcT8cAHI/HADnxWUA6cFoAGM4IABwPhcAbj0aAP3+/wDrx2gA7MdoAP/+/wByQRcAb0AaAHNBFwDpxmMA6cVmAOzIbgD9//0AdkYaAHE+GADsx2kA/Pv4AHJBGABvQBsAcUAbAHJAGwDpxWcAbz8WAHE/FgD8//4A68hnAP7//gByPhkA6cdqAHJAHADqx2IAbj8fAN6xbwDnxWgAcUAUAOrFaABwPxcA68VoAHE/FwD8//8Abj4aAG8+GgD9//8A/v//AP///wDqxmYAYz0eAHBAFQDoxWkAbj8YAOrFaQBwPxgAcT8YAG4+GwCbcS8Acj8YAG8+GwBwPhsAzKFcAHVGFQD9+/sA6MNnAP7++wDrx2QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAZWVlZWVlZWVlZWVlZWVlZWVlCDo0I0xMTEwRTWIoZWVlZTlIChpmZmZmHRAJVhdlZWUwDW5HXV9fX1RALW1lZWVlaA1AGAINDQ0dbBkeL2VlH1ANITZaaWkLQwQYEipTdwEFDUt0JiUkFFsEGHYWRTtMDQ1hLAYtDW92EBgNImB1NQJcMw1ZGGtEB3JeDTRkZThLakAcDVUTLTFPDhAbY2VkUQw9XBxIXB1SD1grZWVlZWUpAjwua05GIA1xZWVlZWVlFXM3A1dCeCcyZ2RlZWVlZT5lSkE/Pz9wSVNlZWVlZWVlZWVlZWVlZWVlZWVlAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAA=" rel="icon" type="image/x-icon" />
+    <script src="js/app.js"></script>
     <title>ChairsPage</title>
 </head>
 
@@ -38,8 +38,14 @@
   <!--Sekcja intro-->
     <section id="intro">
         <div class="container clearfix">
-            <div class="left-arrow"><</div>
-            <div class="black-chair"></div>
+            <div class="left-arrow"> < </div>
+            <div class="slideimg">
+                <ul>
+                    <li class="arm-chair"><img src="./images/black_chair.png"></li>
+                    <li class="orange-chair"><img src="./images/orange.png"></li>
+                    <li class="red-chair"><img src="./images/red.png"></li>
+                </ul>
+            </div>
             <div class="sit-on-chair">
                 <h1>Sit <span>on</span> our <span>chair</span></h1>
                 <p>
@@ -47,7 +53,7 @@
                 </p>
                 <button>Zobacz więcej</button>
             </div>
-            <div class="right-arrow">></div>
+            <div class="right-arrow"> > </div>
         </div>
     </section>
 
@@ -121,10 +127,84 @@
             </div>
         </div>
     </section>
+
+    <!--Sekcja z kalkulatorem-->
+    <section class="application">
+        <div class="main_width container clearfix">
+            <section class="choice_part inline">
+                <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+                <span class="green_bell"></span>
+
+
+                <div class="form">
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz rodzaj</span>
+                        <span class="list_arrow arrow-type"></span>
+                        <ul class="list_panel chair-list">
+                            <li data-price="220">Clair</li>
+                            <li data-price="150">Margarita</li>
+                            <li data-price="300">Selena</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz kolor</span>
+                        <span class="list_arrow arrow-color"></span>
+                        <ul class="list_panel color-list">
+                            <li data-price="0">Czerwony</li>
+                            <li data-price="0">Czarny</li>
+                            <li data-price="5">Pomarańczowy</li>
+                        </ul>
+                    </div>
+                    <div class="drop_down_list">
+                        <span class="list_label">Wybierz materiał</span>
+                        <span class="list_arrow arrow-material"></span>
+                        <ul class="list_panel material-list">
+                            <li data-price="0">Tkanina</li>
+                            <li data-price="125">Skóra</li>
+                        </ul>
+                    </div>
+                    <div class="checkbox check-box">
+                        <input type="checkbox" id="transport" data-price="100">
+                        <label for="transport">Transport</label>
+                    </div>
+                </div>
+            </section>
+
+            <section class="image_part inline">
+                <img src="images/red_chair.png">
+            </section>
+
+            <section class="summary_part inline">
+                <header class="align_right">
+                    <h3>PODSUMOWANIE</h3>
+                    <span class="green_bell"></span>
+                </header>
+
+                <div class="summary_panel">
+                    <div class="panel_left">
+                        <h4 class="title">Twój fotel</h4>
+                        <span class="color"></span>
+                        <span class="pattern"></span>
+                        <span class="transport"></span>
+                    </div>
+                    <div class="panel_right">
+                        <h4 class="title value"></h4>
+                        <span class="color value"></span>
+                        <span class="pattern value"></span>
+                        <span class="transport value"></span>
+                    </div>
+                    <div class="sum_label">SUMA</div>
+                    <div class="sum"><strong></strong></div>
+                </div>
+                <a href="" class="green_button">Zamawiam</a>
+            </section>
+        </div>
+    </section>
+
   <!--Sekcja z kontaktem-->
     <section id="contact">
         <div class="container clearfix">
-            <div class="red_chair"></div>
+            
             <p class="label-contact">Kontakt</p>
             <form>
                 <input type="text" name="name" placeholder="Imię" autocomplete="on" required="required"><br>
